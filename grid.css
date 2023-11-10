@@ -30,8 +30,15 @@ body {
     gap: 10px; */
 
     /* grid-auto-rows: 200px; */
-    /* minimum width */
+    /* minimum height */
     /* grid-auto-rows: minmax(200px, auto); */
+
+    /* 
+        grid-auto-rows: minmax(200px, auto) ensures that any implicitly created rows (those not explicitly sized) 
+        will have a minimum height of 200 pixels 
+        but can expand further if needed based on their content. 
+        It’s a flexible way to handle varying row "heights" in a CSS grid layout.
+    */
 
     /* grid-template-rows: 200px 100px 200px;
     grid-template-rows: repeat(3, 1fr);
@@ -56,6 +63,19 @@ body {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    /* 
+        This keyword instructs the browser to automatically create as many columns as possible while maintaining the specified column size. 
+        It fills the available space with columns.
+
+
+        grid-template-columns: 
+        repeat(auto-fill, minmax(200px, 1fr)); 
+        creates a flexible grid where columns are automatically generated to fill the available space. 
+        Each column will be at least 200 pixels wide but can expand further if needed. 
+        It’s a powerful way to handle responsive layouts without media queries!
+    */
+
     gap: 10px;
 
 
