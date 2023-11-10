@@ -34,3 +34,8 @@ grid-row
 grid-area
 align-self
 justify-self
+
+# note:
+align-items: for containers
+align-self: for item
+
